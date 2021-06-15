@@ -14,13 +14,24 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+@bot.event
+async def on_message(message):
+    """メッセージを処理"""
+    if message.author.bot:  # ボットのメッセージをハネる
+        return
+
+    if message.content == "えへっ。":
+        # チャンネルへメッセージを送信
+        await message.channel.send("「えへっ」ってなんだよ…！！")
+
+
 @bot.command()
 async def map(ctx):
     await ctx.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
 
 @bot.command()
 async def code(ctx):
-    await ctx.send('地図を持って来てやったぞ！\nhttps://genshin.mihoyo.com/m/ja/gift')
+    await ctx.send('ここにはお宝が隠されてるらしいぞ、早く探そうぜ！\nhttps://genshin.mihoyo.com/m/ja/gift')
 
 @bot.command()
 async def test(ctx):
