@@ -29,5 +29,5 @@ async def test(ctx):
         cnt = 0
         await ctx.send('……おい！オイラで遊んでるだろ！！')
 """
-loop.start()
+
 bot.run(token)
