@@ -55,8 +55,7 @@ async def phelp(ctx):
 @bot.command()
 async def time(ctx):
 	now = datetime.now().strftime("%H:%M")
-        channel = client.get_channel(CHANNEL_ID)
-        await channel.send(now)
+        await ctx.send(now)
 
 
 
@@ -73,7 +72,7 @@ async def on_command_error(ctx, error):
 
 ##########################################     タスク     ###################################################
 
-
+"""
 @tasks.loop(seconds=60)
 async def loop():
     now = datetime.now().strftime("%H:%M")
@@ -81,5 +80,5 @@ async def loop():
         channel = client.get_channel(CHANNEL_ID)
         await channel.send("@everyone \n今日のWebログインは受け取ったか？\nURLを貼っておいてやるから感謝しろよな！\nhttps://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481\n")
 loop.start()
-
+"""
 bot.run(token)
