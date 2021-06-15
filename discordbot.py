@@ -73,7 +73,7 @@ async def loop():
     # 現在の時刻
     now = datetime.now().strftime("%H:%M")
     print(now)
-    if now == "04:39":
+    if now == "04:42":
         channel = client.get_channel(CHANNEL_ID)
         await channel.send("@everyone \n今日のWebログインは受け取ったか？\nURLを貼っておいてやるから感謝しろよな！\nhttps://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481\n")  
 
