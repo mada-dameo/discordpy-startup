@@ -13,7 +13,7 @@ callcnt = 0
 @client.event
 async def on_ready():
     # 起動したらターミナルにログイン通知が表示される
-    print('おはよう旅人！いい朝だな！')
+    await channel.send('おはよう旅人！いい朝だな！')
 
 
 @bot.event
