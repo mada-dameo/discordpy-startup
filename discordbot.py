@@ -3,7 +3,7 @@ from discord.ext import tasks
 #from datetime import datetime
 import os
 import traceback
-callcnt = 0
+global　callcnt = 0
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
