@@ -4,7 +4,7 @@ from discord.ext import tasks
 import numpy
 import os
 import traceback
-char cnt = 0
+cnt = 0
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
