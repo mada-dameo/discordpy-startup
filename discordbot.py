@@ -27,6 +27,19 @@ async def on_message(message):
 
 
 
+	await bot.process_commands(message)
+
+##########################################     コマンド     ###################################################
+
+@bot.command()
+async def map(ctx):
+    await ctx.send('マップ')
+@bot.command()
+async def map(ctx):
+	await ctx.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
+
+
+
 ##########################################     コマンドエラー     ###################################################
 
 
@@ -37,12 +50,6 @@ async def on_command_error(ctx, error):
 	await ctx.send(error_msg)
 
 
-##########################################     コマンド     ###################################################
-
-
-@bot.command()
-async def map(ctx):
-	await ctx.send('地図wo持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
 	
 
 
