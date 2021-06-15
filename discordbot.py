@@ -20,7 +20,8 @@ async def map(ctx):
 
 @bot.command()
 async def test(ctx):
-    global callcnt += 1
+    global callcnt
+    callcnt += 1
 #    if cnt<3:
     await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
     await ctx.send(callcnt)
