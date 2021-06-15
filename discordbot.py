@@ -30,7 +30,7 @@ async def test(ctx):
         await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
         #await ctx.send(callcnt)
     elif callcnt>=4:
-        await ctx.send('……おい！オイラで遊んでるだろ！！')
+        await ctx.send('おい！！オイラで遊んでるだろ！')
         callcnt = 0
         #await ctx.send(callcnt)
 
