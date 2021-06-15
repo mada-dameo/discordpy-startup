@@ -3,9 +3,12 @@ from discord.ext import tasks
 #from datetime import datetime
 import os
 import traceback
-callcnt = 0
+
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+channel = discord.utils.get(guild.text_channels, name="テイワット")
+
+callcnt = 0
 
 @client.event
 async def on_ready():
