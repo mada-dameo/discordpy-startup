@@ -8,11 +8,17 @@ bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
+
+
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
+
+
+##########################################     会話     ###################################################
+
 
 @bot.event
 async def on_message(message):
@@ -23,6 +29,10 @@ async def on_message(message):
     if message.content == "えへっ。":
         # チャンネルへメッセージを送信
         await message.channel.send("「えへっ」ってなんだよ…！！")
+
+
+##########################################     コマンド     ###################################################
+
 
 @bot.event
 async def on_command(command):
