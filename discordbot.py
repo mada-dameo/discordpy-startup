@@ -3,7 +3,7 @@ from discord.ext import tasks
 #from datetime import datetime
 import os
 import traceback
-global　callcnt = 0
+callcnt = 0
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -20,7 +20,7 @@ async def map(ctx):
 
 @bot.command()
 async def test(ctx):
-    callcnt + 1
+    callcnt += 1
 #    if cnt<3:
     await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
     await ctx.send(callcnt)
