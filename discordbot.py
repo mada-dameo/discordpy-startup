@@ -25,8 +25,19 @@ async def test(ctx):
     if callcnt<3:
         await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
         await ctx.send(callcnt)
+        """
     else
         callcnt = 0
         await ctx.send('……おい！オイラで遊んでるだろ！！')
-
+        await ctx.send(callcnt)"""
+"""
+@tasks.loop(seconds=60)
+async def loop():
+    # 現在の時刻
+    now = datetime.now().strftime('%H:%M')
+    print(now)
+    if now == '20:00':
+        channel = client.get_channel(CHANNEL_ID)
+        await channel.send('@everyone \n今日のWebログインは受け取ったか？\nURLを貼っておいてやるから感謝しろよな！\nhttps://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481\n')  
+"""
 bot.run(token)
