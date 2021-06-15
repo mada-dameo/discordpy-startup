@@ -51,7 +51,13 @@ async def test(ctx):
         #await ctx.send(callcnt)
 @bot.command()
 async def phelp(ctx):
-    await ctx.send("```\n/map\n/code\n/test\n```")
+	await ctx.send("```\n/map\n/code\n/test\n```")
+@bot.command()
+async def time(ctx):
+	now = datetime.now().strftime("%H:%M")
+        channel = client.get_channel(CHANNEL_ID)
+        await channel.send(now)
+
 
 
 
@@ -70,12 +76,10 @@ async def on_command_error(ctx, error):
 
 @tasks.loop(seconds=60)
 async def loop():
-    # 現在の時刻
     now = datetime.now().strftime("%H:%M")
-    print(now)
     if now == "04:44":
         channel = client.get_channel(CHANNEL_ID)
-        await channel.send("@everyone \n今日のWebログインは受け取ったか？\nURLを貼っておいてやるから感謝しろよな！\nhttps://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481\n")  
-
+        await channel.send("@everyone \n今日のWebログインは受け取ったか？\nURLを貼っておいてやるから感謝しろよな！\nhttps://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481\n")
+loop.start()
 
 bot.run(token)
