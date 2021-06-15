@@ -7,7 +7,10 @@ callcnt = 0
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-
+@client.event
+async def on_ready():
+    # 起動したらターミナルにログイン通知が表示される
+    print('おはよう旅人！いい朝だな！')
 
 
 @bot.event
