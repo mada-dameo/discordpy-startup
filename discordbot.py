@@ -36,7 +36,7 @@ async def on_message(message):
 async def map(ctx):
 	await ctx.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
 async def code(ctx):
-    await ctx.send('ここにはお宝が隠されてるらしいぞ、早く探そうぜ！\nhttps://genshin.mihoyo.com/m/ja/gift')
+	await ctx.send('ここにはお宝が隠されてるらしいぞ、早く探そうぜ！\nhttps://genshin.mihoyo.com/m/ja/gift')
 
 
 ##########################################     コマンドエラー     ###################################################
