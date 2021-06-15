@@ -3,7 +3,7 @@ from discord.ext import tasks
 #from datetime import datetime
 import os
 import traceback
-global callcnt = 0
+callcnt = 0
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -29,4 +29,5 @@ async def test(ctx):
         cnt = 0
         await ctx.send('……おい！オイラで遊んでるだろ！！')
 """
+loop.start()
 bot.run(token)
