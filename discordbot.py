@@ -10,10 +10,7 @@ channel = discord.utils.get(guild.text_channels, name="テイワット")
 
 callcnt = 0
 
-@client.event
-async def on_ready():
-    # 起動したらターミナルにログイン通知が表示される
-    await channel.send('おはよう旅人！いい朝だな！')
+
 
 
 @bot.event
