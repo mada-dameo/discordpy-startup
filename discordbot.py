@@ -18,7 +18,7 @@ async def on_command_error(ctx, error):
 ##########################################     会話     ###################################################
 
 
-@bot.event
+
 async def on_message(message):
 	"""メッセージを処理"""
 	if message.author.bot:  # ボットのメッセージをハネる
@@ -31,14 +31,17 @@ async def on_message(message):
 
 ##########################################     コマンド     ###################################################
 
+async def on_command(command):
+	if command.content == "/map":
+		# チャンネルへメッセージを送信
+		await command.channel.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
+
+"""
 @bot.command()
 async def map(ctx):
 	await ctx.send('地図wo持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
 
-"""	
-	if message.content == "/map":
-		# チャンネルへメッセージを送信
-		await message.channel.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
+	
 
 
 @bot.command()
