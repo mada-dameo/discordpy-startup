@@ -37,15 +37,13 @@ async def on_message(message):
 ##########################################     コマンド     ###################################################
 
 
-@bot.event
-async def on_command(command):
-    """メッセージを処理"""
-    if command.author.bot:  # ボットのメッセージをハネる
+
+    if message.author.bot:  # ボットのメッセージをハネる
         return
 
-    if command.content == "/map":
+    if message.content == "/map":
         # チャンネルへメッセージを送信
-        await command.channel.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
+        await message.channel.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
 
 """
 @bot.command()
