@@ -22,13 +22,11 @@ async def map(ctx):
 async def test(ctx):
     global callcnt
     callcnt += 1
-#    if cnt<3:
-    await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
-    await ctx.send(callcnt)
-"""
+    if callcnt<3:
+        await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
+        await ctx.send(callcnt)
     else
-        cnt = 0
+        callcnt = 0
         await ctx.send('……おい！オイラで遊んでるだろ！！')
-"""
 
 bot.run(token)
