@@ -22,7 +22,7 @@ async def map(ctx):
 async def test(ctx):
     cnt + 1
 #    if cnt<3:
-    await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
+    await ctx.send('オイラだぞ！ちゃんと届いてるよな？'+cnt)
 """
     else
         cnt = 0
