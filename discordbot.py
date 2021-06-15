@@ -24,12 +24,16 @@ async def test(ctx):
     callcnt += 1
     if callcnt<=3:
         await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
-        await ctx.send(callcnt)
+        #await ctx.send(callcnt)
     elif callcnt>=4:
         await ctx.send('……おい！オイラで遊んでるだろ！！')
         callcnt = 0
-        await ctx.send(callcnt)
-        """
+        #await ctx.send(callcnt)
+
+@bot.command()
+async def help(ctx):
+    await ctx.send('```/map\n/test\n```')
+"""
 @tasks.loop(seconds=60)
 async def loop():
     # 現在の時刻
