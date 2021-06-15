@@ -31,7 +31,7 @@ async def test(ctx):
         #await ctx.send(callcnt)
 
 @bot.command()
-async def help(ctx):
+async def phelp(ctx):
     await ctx.send('```/map\n/test\n```')
 """
 @tasks.loop(seconds=60)
