@@ -14,7 +14,7 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def png(ctx):
+async def test(ctx):
     await ctx.send('pong')
 
 
