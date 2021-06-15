@@ -36,7 +36,7 @@ async def test(ctx):
 
 @bot.command()
 async def phelp(ctx):
-    await ctx.send('```\n/map\n/test\n```')
+    await ctx.send('```\n/map\n/code\n/test\n```')
 """
 @tasks.loop(seconds=60)
 async def loop():
