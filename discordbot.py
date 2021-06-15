@@ -23,7 +23,7 @@ async def test(ctx):
     callcnt + 1
 #    if cnt<3:
     await ctx.send('オイラだぞ！ちゃんと届いてるよな？')
-    await ctx.send(cnt)
+    await ctx.send(callcnt)
 """
     else
         cnt = 0
