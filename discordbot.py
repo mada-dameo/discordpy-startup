@@ -1,7 +1,6 @@
 from discord.ext import commands
 from discord.ext import tasks
 #from datetime import datetime
-import numpy
 import os
 import traceback
 cnt = 0
