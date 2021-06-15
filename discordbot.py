@@ -26,13 +26,6 @@ async def on_message(message):
 		await message.channel.send("おはよう旅人！今日も良い朝だな！！")
 
 
-##########################################     コマンド     ###################################################
-
-
-@bot.command()
-async def map(ctx):
-	await ctx.send('地図wo持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
-	
 
 ##########################################     コマンドエラー     ###################################################
 
@@ -42,6 +35,17 @@ async def on_command_error(ctx, error):
 	orig_error = getattr(error, "original", error)
 	error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
 	await ctx.send(error_msg)
+
+
+##########################################     コマンド     ###################################################
+
+
+@bot.command()
+async def map(ctx):
+	await ctx.send('地図wo持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
+	
+
+
 
 """
 @bot.command()
