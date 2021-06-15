@@ -17,7 +17,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def map(ctx):
     await ctx.send('地図を持って来てやったぞ！\nhttps://webstatic-sea.mihoyo.com/app/ys-map-sea/index.html?lang=ja-jp#/map/2?lang=ja-jp&shown_types=3,132,133,134,135,136,137,138,157,2,154,181&center=1002.58,-589.05&zoom=-2.50')
-
+"""
 @bot.command()
 async def test(ctx):
     cnt + 1
@@ -26,5 +26,5 @@ async def test(ctx):
     else
         cnt = 0
         await ctx.send('……おい！オイラで遊んでるだろ！！')
-
+"""
 bot.run(token)
