@@ -1,10 +1,11 @@
 from discord.ext import commands
 from discord.ext import tasks
-import datetime
+from datetime import datetime
 import os
 import traceback
 bot = commands.Bot(command_prefix="/")
 token = os.environ["DISCORD_BOT_TOKEN"]
+channel = os.environ["CHANNEL_ID"]
 #channel = discord.utils.get(guild.text_channels, name="テイワット")
 callcnt = 0
 
@@ -70,13 +71,13 @@ async def on_command_error(ctx, error):
 
 ##########################################     タスク     ###################################################
 
-"""
 @tasks.loop(seconds=60)
 async def loop():
-    now = datetime.now().strftime("%H:%M")
-    if now == "04:44":
-        channel = client.get_channel(CHANNEL_ID)
-        await channel.send("@everyone \n今日のWebログインは受け取ったか？\nURLを貼っておいてやるから感謝しろよな！\nhttps://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481\n")
-loop.start()
-"""
+	# 現在の時刻
+	now = datetime.now().strftime('%H:%M')
+	await channnel.send(now)
+
+
+
+
 bot.run(token)
