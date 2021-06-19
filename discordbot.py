@@ -47,7 +47,7 @@ async def test(ctx):
         callcnt = 0
         #await ctx.send(callcnt)
 @bot.command()
-async def phelp(ctx):
+async def paimon(ctx):
 	await ctx.send("```\n/map\n/code\n/test\n```")
 """
 @bot.command()
