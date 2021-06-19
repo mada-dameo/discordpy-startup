@@ -70,13 +70,13 @@ async def on_command_error(ctx, error):
 
 
 ##########################################     タスク     ###################################################
-
+"""
 @tasks.loop(seconds=60)
 async def loop():
 	# 現在の時刻
 	now = datetime.now().strftime('%H:%M')
 	await channnel.send(now)
-
+"""
 
 
 
