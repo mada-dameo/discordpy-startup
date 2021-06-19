@@ -21,10 +21,7 @@ async def on_message(message):
 		return
 	if message.content == "えへっ。":
 		await message.channel.send("「えへっ」ってなんだよ…！！")
-	if message.content == "おはよう":
-		await message.channel.send("おはよう旅人！今日も良い朝だな！！")
-	if message.content == "おやすみ":
-		await message.channel.send("おやすみ！")
+
 
 
 	await bot.process_commands(message)
