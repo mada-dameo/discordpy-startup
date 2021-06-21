@@ -51,12 +51,12 @@ async def test(ctx):
 async def paimon(ctx):
 	await ctx.send("```\n/map\n/code\n/test\n```")
 
-"""
+
 @bot.command()
 async def time(ctx):
 	now = datetime.now().strftime("%H:%M")
         await ctx.send(now)
-"""
+
 
 
 
