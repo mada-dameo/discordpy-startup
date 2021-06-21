@@ -54,7 +54,8 @@ async def paimon(ctx):
 
 @bot.command()
 async def time(ctx):
-	now = datetime.now().strftime('%H:%M')
+	now = datetime.datatime.now()
+	now = (now.strftime('%H:%M'))
 	await ctx.send(now)
 
 
