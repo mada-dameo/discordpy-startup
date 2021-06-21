@@ -74,7 +74,7 @@ async def on_command_error(ctx, error):
 async def loop():
 	now = datetime.datetime.now().strftime('%H:%M')
 	
-	if now == '05:31':
+	if now == '11:31':
         await channel.send('test')
 
 bot.run(token)
