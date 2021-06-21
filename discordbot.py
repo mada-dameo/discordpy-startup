@@ -6,7 +6,7 @@ import os
 import traceback
 bot = commands.Bot(command_prefix="/")
 token = os.environ["DISCORD_BOT_TOKEN"]
-channel = bot.get_channel("853870451535904799")
+channel = os.environ["CHANNEL_ID"]
 #channel = discord.utils.get(guild.text_channels, name="テイワット")
 callcnt = 0
 
