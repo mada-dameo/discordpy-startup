@@ -52,12 +52,6 @@ async def paimon(ctx):
 	await ctx.send("```\n/map\n/code\n/test\n```")
 
 
-@bot.command()
-async def time(ctx):
-	#now = datetime.now().strftime("%H:%M")
-        await ctx.send(datetime.now().strftime("%H:%M"))
-
-
 
 
 ##########################################     コマンドエラー     ###################################################
@@ -71,13 +65,16 @@ async def on_command_error(ctx, error):
 
 
 ##########################################     タスク     ###################################################
-"""
+
 @tasks.loop(seconds=60)
 async def loop():
-	# 現在の時刻
-	now = datetime.now().strftime('%H:%M')
-	await channnel.send(now)
-"""
+    # 現在の時刻
+    now = datetime.now().strftime('%H:%M')
+    print(now)
+    if now == '19:46':
+        channel = client.get_channel(853870451535904799)
+        await channel.send('@everyone \n今日のWebログインは受け取ったか？\nURLを貼っておいてやるから感謝しろよな！\nhttps://webstatic-sea.mihoyo.com/ys/event/signin-sea/index.html?act_id=e202102251931481\n')  
+
 
 
 
