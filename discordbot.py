@@ -73,7 +73,7 @@ async def on_command_error(ctx, error):
 async def loop():
 	now = datetime.datetime.now().strftime('%H:%M')
 	#channel = bot.get_channel["CHANNEL_ID"]
-	channel = bot.get_channel["CHANNEL_ID"]
+	#channel = bot.get_channel["CHANNEL_ID"]
 	#if now == '22:41':
 	await channel.send(now)
 loop.start()
