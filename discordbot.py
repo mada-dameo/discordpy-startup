@@ -75,7 +75,7 @@ async def loop():
 	#channel = bot.get_channel["CHANNEL_ID"]
 	#channel = bot.get_channel["CHANNEL_ID"]
 	#if now == '22:41':
-	channel = bot.get_channel(ch)
+	channel = get_channel(ch)
 	await channel.send("loopが回ったぞ")
 loop.start()
 
