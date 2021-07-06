@@ -6,7 +6,7 @@ import os
 import traceback
 bot = commands.Bot(command_prefix="/")
 token = os.environ["DISCORD_BOT_TOKEN"]
-channel = os.environ["CHANNEL_ID"]
+channel = bot.get_channel["CHANNEL_ID"]
 #channel = discord.utils.get(guild.text_channels, name="テイワット")
 callcnt = 0
 
@@ -74,7 +74,7 @@ async def on_command_error(ctx, error):
 async def loop():
 	now = datetime.datetime.now().strftime('%H:%M')
 	#channel = bot.get_channel["CHANNEL_ID"]
-	if now == '12:51':
+	if now == '22:41':
         await channel.send('test')
 
 bot.run(token)
