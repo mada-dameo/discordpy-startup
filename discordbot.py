@@ -9,7 +9,6 @@ token = os.environ["DISCORD_BOT_TOKEN"]
 channel = bot.get_channel["CHANNEL_ID"]
 #channel = discord.utils.get(guild.text_channels, name="テイワット")
 callcnt = 0
-print("1")
 
 
 
@@ -72,12 +71,10 @@ async def on_command_error(ctx, error):
 
 @tasks.loop(seconds=60)
 async def loop():
-	print("4")
 	now = datetime.datetime.now().strftime('%H:%M')
 	#channel = bot.get_channel["CHANNEL_ID"]
 	channel = bot.get_channel["CHANNEL_ID"]
 	#if now == '22:41':
-	print(now)
 	await channel.send(now)
 loop.start()
 
