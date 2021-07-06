@@ -75,7 +75,7 @@ async def loop():
 	print("4")
 	now = datetime.datetime.now().strftime('%H:%M')
 	#channel = bot.get_channel["CHANNEL_ID"]
-	channel = bot.get_channel(854407350084960297)
+	channel = bot.get_channel["CHANNEL_ID"]
 	#if now == '22:41':
 	print(now)
 	await channel.send(now)
