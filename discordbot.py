@@ -75,8 +75,8 @@ async def loop():
 	#channel = bot.get_channel["CHANNEL_ID"]
 	#channel = bot.get_channel["CHANNEL_ID"]
 	#if now == '22:41':
-	chan = get_channel(ch)
-	await chan.channel.send("loopが回ったぞ")
+	channel = bot.get_channel(ch)
+	await channel.send("loopが回ったぞ")
 loop.start()
 
 bot.run(token)
