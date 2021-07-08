@@ -56,6 +56,11 @@ async def time(ctx):
 	now = datetime.datetime.now().strftime('%H:%M')
 	await ctx.send(now)
 
+@bot.command()
+async def ch(ctx):
+	channel = bot.get_channel(ch)
+	await ctx.send(channel)
+
 
 ##########################################     コマンドエラー     ###################################################
 
