@@ -11,6 +11,7 @@ CHANNEL_ID = os.environ["CHANNEL_ID"]
 
 client = discord.Client()
 
+
 # 60秒に一回ループ
 @tasks.loop(seconds=60)
 async def loop():
