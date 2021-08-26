@@ -6,8 +6,8 @@ from discord.ext import tasks
 from asyncio import sleep
 
 
-TOKEN = "ODUzODIxMzM4NTM1MzI5ODEy.YMa9Fg.7UCsHcdkP84CXe_HUH2MC0xkCDo"
-CHANNEL_ID = 854407350084960297
+TOKEN = os.environ["DISCORD_BOT_TOKEN"]
+CHANNEL_ID = os.environ["CHANNEL_ID"]
 
 client = discord.Client()
 
