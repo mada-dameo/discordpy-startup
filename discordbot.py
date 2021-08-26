@@ -5,8 +5,8 @@ import datetime
 import os
 import traceback
 bot = commands.Bot(command_prefix="/")
-token = os.environ.get["DISCORD_BOT_TOKEN"]
-ch = os.environ.get["CHANNEL_ID"]
+token = os.environ["DISCORD_BOT_TOKEN"]
+ch = os.environ["CHANNEL_ID"]
 #channel = discord.utils.get(guild.text_channels, name="テイワット")
 callcnt = 0
 
