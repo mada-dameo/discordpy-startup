@@ -1,11 +1,12 @@
-from discord.ext import commands
-from discord.ext import tasks
-#from datetime import datetime
+
+import discord
 import datetime
 import os
 import traceback
+from discord.ext import commands
+from discord.ext import tasks
 bot = commands.Bot(command_prefix="/")
-token = os.environ.get["DISCORD_BOT_TOKEN"]
+token = os.environ.["DISCORD_BOT_TOKEN"]
 ch = os.environ["CHANNEL_ID"]
 #channel = discord.utils.get(guild.text_channels, name="テイワット")
 callcnt = 0
