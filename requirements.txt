@@ -1,1 +1,5 @@
-discord.py[voice]>=1.4.1
+discord.py
+import datetime
+import pytz
+from discord.ext import tasks
+from asyncio import sleep
